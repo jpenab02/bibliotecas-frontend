@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catálogo de bibliotecas</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header><div><p>Red de bibliotecas</p><h1>Catálogo de sedes y libros</h1></div></header>
+  <main>
+    <section>
+      <h2>Registrar biblioteca</h2>
+      <form id="registro">
+        <label>Nombre<input name="nombre" maxlength="255" required></label>
+        <label>Dirección<input name="direccion" maxlength="255" required></label>
+        <label>Ciudad<input name="ciudad" maxlength="255" required></label>
+        <button>Registrar biblioteca</button>
+      </form>
+      <p id="estado-registro" role="status"></p>
+    </section>
+    <section>
+      <div class="encabezado"><h2>Libros por biblioteca</h2><button id="actualizar" type="button">Actulizar</button></div>
+      <p id="estado-tabla" role="status"></p>
+      <div class="tabla"><table aria-label="Libros por biblioteca">
+        <thead><tr><th>Título</th><th>Autor</th><th>Año</th><th>Biblioteca</th></tr></thead>
+        <tbody id="libros"></tbody>
+      </table></div>
+    </section>
+  </main>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
